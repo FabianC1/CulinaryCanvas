@@ -1,0 +1,1138 @@
+/* This is the styling for the body. It sets the background image and margin */
+body {
+    background-image: url(../Images/Background2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+/* Styling for the header section */
+header {
+    position: static;
+    width: 100%;
+    border-radius: 9px;
+    height: 12%;
+    margin-top: 0%;
+    box-shadow: 0 0 30px;
+}
+
+/* Styling for links within the header */
+header a {
+    float: left;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 0.5%;
+    margin-right: 4%;
+    padding: 1.1%;
+    margin-left: 5%;
+}
+
+/* Styling for header links on hover */
+header a:hover {
+    background: rgb(238, 238, 238);
+    border-radius: 40px;
+    height: auto;
+    color: black;
+}
+
+/* Styling for the active link in the header */
+header a.active {
+    color: rgb(141, 109, 68);
+    height: auto;
+    background: url(../Images/Logo.png);
+    border-radius: 40px;
+    border-color: white;
+    border-style: solid;
+}
+
+/* Styling for the footer section */
+footer {
+    position: absolute;
+    color: black;
+    border: 2px black;
+    background-color: rgb(141, 109, 68);
+    opacity: 0.8;
+    width: 100%;
+    height: 12%;
+    bottom: 0;
+    border-radius: 9px;
+    box-shadow: 0 0 30px;
+}
+
+/* Styling for image divs */
+div.images {
+    position: relative;
+    float: right;
+    margin-top: 1%;
+    margin-right: 12%;
+}
+
+/* Styling for the logo in the footer */
+.footerlogo {
+    height: 80%;
+    width: auto;
+    float: left;
+    border-radius: 9px;
+    border-style: double;
+    border-color: white;
+    margin-top: 0.5%;
+    margin-left: 5%;
+}
+
+/* Styling for neon text */
+.neonText {
+    color: #ffffff;
+    text-shadow: (various shadow effects);
+    position: absolute;
+    text-align: center;
+    left: -5px;
+    top: 80%;
+    font-weight: lighter;
+}
+
+
+
+/* Styling for the .logotop class */
+.logotop {
+    height: 80%;
+    width: auto;
+    float: right;
+    margin-top: 0.5%;
+    margin-right: 3%;
+    border-radius: 9px;
+    border-style: double;
+    border-color: white;
+}
+
+/* Styling for the aside element */
+aside {
+    animation-name: animation;
+    animation-duration: 4s;
+    position: absolute;
+    float: left;
+    margin-left: 0%;
+    width: 25%;
+    height: 75%;
+    background: transparent;
+    border-radius: 15px;
+    border-color: rgb(141, 109, 68);
+    border-style: double;
+    box-shadow: 0 0 30px;
+    top: 12%;
+}
+
+
+.Aside2 {
+    animation-name: animation2;
+    animation-duration: 4s;
+    position: absolute;
+    float: left;
+    margin-left: 0%;
+    width: 25%;
+    height: 75%;
+    background: transparent;
+    border-radius: 15px;
+    border-color: rgb(141, 109, 68);
+    border-style: double;
+    box-shadow: 0 0 30px;
+}
+
+
+/* Styling for h3 elements within the aside element */
+aside h3 {
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size: 50px;
+}
+
+/* Styling for the main element */
+main {
+    backdrop-filter: blur(20px);
+    position: relative;
+    width: 60%;
+    height: 75%;
+    float: right;
+    font-style: italic;
+    background: rgba(0, 0, 0, 0.283);
+    border-radius: 15px;
+    border-color: rgb(255, 255, 255);
+    border-style: double;
+    font-size: x-large;
+    box-shadow: 0 0 30px;
+    right: 5%;
+}
+
+/* Styling for h1 elements with the class .text */
+h1.text {
+    font-size: 150%;
+    color: white;
+    padding: 2%;
+    margin-top: 5%;
+    margin-left: 25%;
+    text-decoration: underline rgb(141, 109, 68);
+}
+
+/* Styling for elements with the class .contacts */
+.contacts {
+    font-weight: bold;
+    word-spacing: 5%;
+    line-height: 100%;
+    margin-left: 10%;
+}
+
+/* Styling for elements with the class .support */
+.support {
+    font-weight: bold;
+    word-spacing: 5%;
+    line-height: 180%;
+    margin-left: 2%;
+}
+
+/* Styling for elements with the class .icon */
+.icon {
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
+
+
+/* Styling for the .loginContainer class */
+.loginContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -50%);
+    width: 40%;
+    height: 10%;
+    background: rgba(0, 0, 0, 0.283);
+    backdrop-filter: blur(1px);
+}
+
+/* Styling for the .createContainer class */
+.createContainer {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20%;
+    height: 60%;
+    background: rgba(0, 0, 0, 0.283);
+    backdrop-filter: blur(20px);
+}
+
+/* Styling for the input container */
+.input-container {
+    width: 90%;
+    height: 10%;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+/* Styling for input fields and labels within the input container */
+.input-field {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 25px;
+}
+
+.input-field label {
+    margin-bottom: 1%;
+}
+
+/* Styling for the checkbox field */
+.checkbox-field {
+    display: flex;
+    align-items: center;
+}
+
+/* Hide the default checkbox */
+.checkbox-input {
+    display: none;
+}
+
+/* Style the custom checkbox */
+.checkbox-input+.checkbox::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    background-color: transparent;
+    border-radius: 3px;
+    margin-right: 5px;
+    position: relative;
+}
+
+/* Style the custom checkbox when it's checked */
+.checkbox-input:checked+.checkbox::before {
+    background-color: rgb(141, 109, 68);
+}
+
+/* Styling for the checkbox label */
+.checkbox-label {
+    border-bottom: 2px solid rgb(141, 109, 68);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Styling for labels */
+label {
+    float: left;
+    margin-left: 5%;
+    margin-top: 5px;
+    font-size: 90%;
+    font-style: normal;
+}
+
+/* Styling for the 'Register Here' button */
+.registerHereButton {
+    margin-top: 20%;
+    height: 8%;
+    width: 50%;
+    margin-left: 25%;
+    background: linear-gradient(to left, rgb(128, 75, 0), white);
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 7px 0px 7px 0px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Styling for the 'Register Here' button on hover/active */
+.registerHereButton:hover {
+    background: linear-gradient(to right, rgb(128, 75, 0), white);
+    animation: pulse 0.5s infinite alternate;
+}
+
+
+/* CSS style for the username input */
+input[type="text"] {
+    float: left;
+    margin-left: 5%;
+    background-color: transparent;
+    width: 80%;
+    height: 5%;
+    color: rgb(255, 255, 255);
+    border: transparent;
+    font-size: large;
+    content: "";
+    /* This allows me to make the content property empty */
+    display: block;
+    border-bottom: 2px solid rgb(141, 109, 68);
+    ;
+}
+
+/* Styling for the placeholder text of the username input */
+input[type="text"]::placeholder {
+    color: #c6c6c6;
+    font-style: italic;
+    text-decoration: none;
+    font-size: large;
+    width: 80%;
+}
+
+/* Styling when the username input is in focus (clicked) */
+input[type="text"]:focus {
+    background: transparent;
+    outline: none;
+    font-size: large;
+    width: 80%;
+}
+
+/* CSS style for the password input */
+input[type="password"] {
+    float: left;
+    margin-left: 5%;
+    background-color: transparent;
+    width: 80%;
+    height: 5%;
+    color: rgb(255, 255, 255);
+    border: transparent;
+    font-size: large;
+    content: "";
+    /* This allows me to make the content property empty */
+    display: block;
+    border-bottom: 2px solid rgb(141, 109, 68);
+    ;
+}
+
+/* Styling for the placeholder text of the password input */
+input[type="password"]::placeholder {
+    color: #c6c6c6;
+    font-style: italic;
+    text-decoration: none;
+    font-size: large;
+    width: 80%;
+}
+
+/* Styling when the password input is in focus (clicked) */
+input[type="password"]:focus {
+    background: transparent;
+    outline: none;
+    font-size: large;
+    width: 80%;
+}
+
+/* CSS style for the date input */
+input[type="date"] {
+    float: left;
+    margin-left: 5%;
+    background-color: transparent;
+    width: 80%;
+    height: 5%;
+    color: rgb(255, 255, 255);
+    border: transparent;
+    font-size: large;
+    content: "";
+    /* This allows me to make the content property empty */
+    display: block;
+    border-bottom: 2px solid rgb(141, 109, 68);
+    ;
+}
+
+/* Styling for the placeholder text of the date input */
+input[type="date"]::placeholder {
+    color: #c6c6c6;
+    font-style: italic;
+    text-decoration: none;
+    font-size: large;
+    width: 80%;
+}
+
+/* Styling when the date input is in focus (clicked) */
+input[type="date"]:focus {
+    background: transparent;
+    outline: none;
+    font-size: large;
+    width: 80%;
+}
+
+/* CSS style for the email input */
+input[type="email"] {
+    float: left;
+    margin-left: 5%;
+    background-color: transparent;
+    width: 80%;
+    height: 5%;
+    color: rgb(255, 255, 255);
+    border: transparent;
+    font-size: large;
+    content: "";
+    /* This allows me to make the content property empty */
+    display: block;
+    border-bottom: 2px solid rgb(141, 109, 68);
+    ;
+}
+
+/* Styling for the placeholder text of the email input */
+input[type="email"]::placeholder {
+    color: #c6c6c6;
+    font-style: italic;
+    text-decoration: none;
+    font-size: large;
+    width: 80%;
+}
+
+/* Styling when the email input is in focus (clicked) */
+input[type="email"]:focus {
+    background: transparent;
+    outline: none;
+    font-size: large;
+    width: 80%;
+}
+
+
+
+
+/* Styling for the login button */
+.loginButton {
+    position: static;
+    margin-top: 7%;
+    margin-left: 35%;
+    height: 8%;
+    width: 30%;
+    background: linear-gradient(to right, white, rgb(128, 75, 0));
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 7px 0px 7px 0px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Styling for the login button on hover/active */
+.loginButton:hover {
+    color: rgb(0, 0, 0);
+    background: linear-gradient(to right, rgb(128, 75, 0), white);
+    opacity: 0.8;
+    animation: bounce 1s infinite;
+}
+
+/* Styling for the "Register" button */
+.registerButton {
+    margin-left: 60%;
+    margin-top: 3%;
+    position: static;
+    height: 9%;
+    width: 30%;
+    background: linear-gradient(to right, white, rgb(128, 75, 0));
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 7px 0 7px 0;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Styling for the "Register" button on hover/active */
+.registerButton:hover {
+    color: rgb(0, 0, 0);
+    background: linear-gradient(to right, rgb(128, 75, 0), white);
+    opacity: 0.8;
+    animation: bounce 1s infinite;
+}
+
+/* Styling for a login alert message */
+.LoginAlert {
+    margin-left: 5%;
+    font-size: 25px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgb(128, 75, 0);
+    position: fixed;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Style for the register Registration Failure text */
+.RegisterAlert {
+    position: absolute;
+    margin-top: 13%;
+    left: 45%;
+    transform: translateX(-35%);
+    font-size: 25px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgb(141, 109, 68);
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+
+
+
+
+
+/* one of the colour changing animations used for the website */
+@keyframes animation {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+        left: 0px;
+        top: 12%;
+    }
+
+    25% {
+        background: rgba(88, 67, 0, 0.711);
+        /* Mustard */
+        left: 9.1%;
+        top: 12%;
+    }
+
+    50% {
+        background: rgba(117, 38, 34, 0.399);
+        /* Terracotta */
+        left: 9.1%;
+        top: 20%;
+    }
+
+    75% {
+        background: rgba(80, 66, 30, 0.399);
+        /* Coral */
+        left: 0px;
+        top: 20%;
+    }
+
+    100% {
+        background-color: transparent;
+        left: 0px;
+        top: 12%;
+    }
+}
+
+/* one of the colour changing animations used for the website */
+@keyframes animation2 {
+    0% {
+        background-color: rgba(0, 0, 0, 0);
+        left: 0px;
+        top: 12%;
+    }
+
+    25% {
+        background: rgba(88, 67, 0, 0.711);
+        /* Mustard */
+        left: 6.5%;
+        top: 12%;
+    }
+
+    50% {
+        background: rgba(117, 38, 34, 0.399);
+        /* Terracotta */
+        left: 6.5%;
+        top: 20%;
+    }
+
+    75% {
+        background: rgba(80, 66, 30, 0.399);
+        /* Coral */
+        left: 0px;
+        top: 20%;
+    }
+
+    100% {
+        background-color: transparent;
+        left: 0px;
+        top: 12%;
+    }
+}
+
+
+
+/* creates a shadow effect animation on buttons */
+@keyframes shadow-drop-center {
+    0% {
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+
+
+
+
+.shadow-drop-center {
+    -webkit-animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+/* creates a pusling effect animation on buttons */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+
+/* creates a bounce effect on buttons */
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+
+
+
+
+
+.containerAnimation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+    background-image: url(../Images/Chicken.jpeg);
+    /* Replace 'your-image-url.jpg' with your image URL */
+    background-size: cover;
+    background-position: center;
+    animation: spreadAndColor 4s ease-in-out infinite alternate;
+}
+
+@keyframes spreadAndColor {
+    0% {
+        transform: translateX(0);
+        background-color: red;
+    }
+
+    25% {
+        transform: translateX(-100%);
+        background-color: blue;
+    }
+
+    50% {
+        transform: translateX(100%);
+        background-color: green;
+    }
+
+    75% {
+        transform: translateX(0);
+        background-color: yellow;
+    }
+
+    100% {
+        transform: translateX(0);
+        background-color: red;
+    }
+}
+
+.image:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.image:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.image:nth-child(4) {
+    animation-delay: 3s;
+}
+
+
+
+
+
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    /* Adjusted padding-top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* The Modal Content */
+.modal-content {
+    position: relative;
+    background-color: rgba(32, 31, 31);
+    border-radius: 15px;
+    margin: auto;
+    padding: 50px;
+    /* Increased padding */
+    border: 1px solid #888;
+    width: 95%;
+    max-width: 800px;
+    max-height: 1000px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+
+
+/* Styling for modal body */
+.modal-body {
+    padding: 20px;
+    font-size: 40px;
+}
+
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.modal-header {
+    padding: 2px 16px;
+    background: linear-gradient(to right, rgb(128, 75, 0), white);
+    border: solid 5px;
+    border-radius: 15px;
+    border-color: rgba(255, 145, 2, 0.7);
+}
+
+
+.modal-footer {
+    padding: 2px 16px;
+    /* Matched color */
+    background: linear-gradient(to left, rgb(128, 75, 0), white);
+    border: solid 5px;
+    border-radius: 15px;
+    border-color: rgba(255, 145, 2, 0.7);
+}
+
+.modal-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: white(0, 0, 0, 0.263);
+    font-size: 30px;
+    color: black;
+    border: none;
+    border-radius: 15px 5px 15px 5px;
+    cursor: pointer;
+    border-bottom: 5px solid;
+    border-color: rgba(255, 145, 2, 0.7);
+}
+
+
+.modal-button:hover {
+    background: linear-gradient(to left, rgb(128, 75, 0), black);
+    color: white;
+}
+
+.backButton {
+    background: rgb(141, 109, 68);
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+
+.backButton:hover {
+    background: linear-gradient(to right, rgb(128, 75, 0), white);
+    color: black;
+    animation: pulse 0.5s infinite alternate;
+}
+
+.recipe {
+    display: flex;
+    margin: 30px;
+    /* Center horizontally with margin */
+}
+
+.recipe-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.recipe-details {
+    color: white;
+}
+
+.recipe-name {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.recipe-description {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+
+#addRecipeButton {
+    position: absolute;
+    background: rgb(141, 109, 68);
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 9px;
+    font-weight: bold;
+    margin-top: -7%;
+    left: 40%;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    /* Vertically align content */
+
+}
+
+.account-image {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    /* Add some space below the name */
+}
+
+.account-details {
+    color: white;
+    margin-left: 20px;
+    /* Adjust spacing between image and details */
+}
+
+.account-name {
+    font-size: 20px;
+    color: white;
+    text-decoration: underline;
+}
+
+.navigation-button-container {
+    position: absolute;
+    padding: 10px;
+    width: 100%;
+    /* Ensure the container takes up the full width */
+}
+
+.navigation-button {
+    background: rgb(141, 109, 68);
+    height: 5%;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 9px;
+    font-weight: bold;
+    margin-right: 10px;
+    /* Add margin between buttons */
+    padding-right: 20%;
+}
+
+
+#recipeDescription {
+    display: none;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    background-color: #f7f7f7;
+    border: 5px solid rgb(141, 109, 68);
+    border-radius: 15px;
+    padding: 5px;
+    resize: vertical;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-rif;
+    font-size: 25px;
+}
+
+#imageUpload {
+    font-size: medium;
+    display: none;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 4px;
+    color: white;
+    background: linear-gradient(to right, rgb(128, 75, 0), rgb(34, 34, 34));
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+#submitRecipeButton {
+    font-size: medium;
+    margin-left: 65%;
+    margin-top: -6%;
+    display: none;
+    background: linear-gradient(to right, rgb(128, 75, 0), white);
+    color: black;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: 2px solid black;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#recipeTitle{
+    display: none;
+}
+
+#submitRecipeButton:hover {
+    background: linear-gradient(to right, rgb(128, 75, 0), white);
+    color: black;
+    animation: pulse 0.5s infinite alternate;
+}
+
+#recipeSearchBar {
+    position: absolute;;
+    margin: 15px 0 30px 0;
+}
+
+#placeholderRecipes {
+    margin-top: 10%;
+    overflow-y: scroll;
+    max-height: 280px;
+}
+
+#usernameDisplay {
+    position: fixed;
+    color: white;
+    font-size: x-large;
+    display: inline-block;
+    top: 4%;
+    left: 50%;
+    border-bottom: rgb(141, 109, 68) 5px solid;
+    border-radius: 5px;
+}
+
+
+#userMessage {
+    position: absolute;
+    margin-top: 0%;
+}
+
+
+.LogoutButtonStyle {
+    position: absolute;
+    font-size: x-large;
+    background: transparent;
+    color: white;
+    border-radius: 4px;
+    border: 0px solid black;
+    border-bottom: rgb(141, 109, 68) 5px solid;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1.8%;
+    margin-left: 70%;
+}
+
+.LogoutButtonStyle:hover {
+    animation: pulse 0.5s infinite alternate;
+}
+
+.h1{
+    border-bottom: rgb(141, 109, 68) 5px solid;;
+}
+
+.description-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.description {
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+    font-size: x-large;
+    margin-left: 5%;
+    margin-top: -2%;
+}
+
+.cooking-tool-container {
+    width: 200px;
+    height: 200px;
+    margin-top: 10%;
+    position: relative;
+}
+
+.cooking-spoon {
+    background-color: transparent;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: spoonAnimation 2s infinite alternate;
+    margin-top: 250px;
+}
+
+@keyframes spoonAnimation {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(30deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+.accounts-container{
+    margin-top: 2%;
+    overflow-y: scroll;
+    max-height: 300px;
+}
+
+#viewAccountButton {
+    position: absolute;
+    background: rgb(141, 109, 68);
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 9px;
+    font-weight: bold;
+    margin-top: -7%;
+    left: 40%;
+}
+
+#profilePictureInput{
+    font-size: medium;
+    margin-left: 10%;
+    margin-top: -6.5%;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 4px;
+    color: white;
+    background: linear-gradient(to right, rgb(128, 75, 0), rgb(34, 34, 34));
+    width: 250px;
+}
+
+
+.ShowHide{
+    font-size: x-large;
+    background: transparent;
+    color: white;
+    border-radius: 4px;
+    border: 0px solid black;
+    border-bottom: rgb(141, 109, 68) 5px solid;
+    border-radius: 5px;
+    cursor: pointer;
+}

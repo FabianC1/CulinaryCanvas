@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+
+<head>
+    <!-- Title of the page and link to the stylesheet -->
+    <title>Home Page</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <script src="./Js/ModalCode.js"></script>
+    <script src="./Js/functions.js"></script>
+    <script src="./Js/musicControls.js"></script>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <a>Every bite tells a delicious story</a>
+            <div id="usernameDisplay"></div>
+            <div id="logoutContainer">
+                <button onclick="logout()" class="LogoutButtonStyle" id="LogoutButton">Logout</button>
+            </div>
+
+            <img id="logoButton" class="logotop" style="cursor: pointer;" src="./Images/WebsiteLogo.png">
+        </nav>
+    </header>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2 style="margin-left: 40%;">Choose an option</h2>
+            </div>
+            <div class="modal-body">
+                <!-- Buttons for login, register, see accounts, and recipes -->
+                <button class="modal-button">Login</button>
+                <button class="modal-button">Register</button>
+                <button class="modal-button">Accounts</button>
+                <button class="modal-button">Recipes</button>
+            </div>
+            <div class="modal-footer">
+                <h3 style="margin-left: 25%;">Have a look at our various recipes and users!</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <!-- Add your login form here -->
+            <h2 style="color: white;">Login Form</h2>
+            <form id="loginForm" style="align-items: left; margin-left: 10%; color: white; opacity: 0.8;">
+                <!-- Form for user login -->
+                <div class="input-container" style="margin-top: 4%;">
+                    <div class="input-field">
+                        <label for="email">Email:</label>
+                        <input type="email" id="emailLogin" placeholder="Please enter your Email..." name="email"
+                            required>
+                    </div>
+                </div>
+
+                <div class="input-container" style="margin-top: 4%;">
+                    <div class="input-field">
+                        <label for="password">Password:</label>
+                        <input type="password" id="passwordLogin" placeholder="Please enter your Password..."
+                            name="password" required>
+                    </div>
+                </div>
+
+                <button class="ShowHide" type="button" onclick="togglePasswordVisibility()">Show/Hide</button>
+
+                <div>
+                    <p class="LoginAlert" id="LoginFailure"></p>
+                </div>
+
+                <div style="margin-top: 2%;">
+                    <label class="checkbox-label" style="margin-top: 10%;">
+                        <input type="checkbox" class="checkbox-input">
+                        <span class="checkbox">Remember me</span>
+                    </label>
+                </div>
+
+                <audio id="LoginCorrectSound" src="./Sounds/LoginCorrect.mp3"></audio>
+                <audio id="LoginFailSound" src="./Sounds/LoginFail.mp3"></audio>
+
+                <div>
+                    <button id="submit" type="button" onclick="handleLogin()" class="loginButton">LogIn</button>
+
+                </div>
+            </form>
+            <div>
+                <button class="backButton" onclick="goBackToMainModal()">Back</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal" style="margin-top: -2%;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <!-- Add your registration form here -->
+            <h2 style="color: white;">Register Form</h2>
+            <form id="registerForm">
+                <form id="myForm" type="post"
+                    style="align-items: left; margin-left: 10%; color: white; opacity: 0.8; overflow: scroll;">
+                    <!-- User registration input fields -->
+                    <div class="input-container" style="margin-top: 2%;">
+                        <div class="input-field">
+                            <label for="username">Username:</label>
+                            <input type="text" id="usernameInput" placeholder="Please enter your Username..."
+                                name="username" required minlength="3">
+                        </div>
+                    </div>
+
+                    <div class="input-container" style="margin-top: 2%;">
+                        <div class="input-field">
+                            <label for="email">Email:</label>
+                            <input type="email" id="emailInput" placeholder="Please enter your Email..." name="email"
+                                required>
+                        </div>
+                    </div>
+
+                    <div class="input-container" style="margin-top: 2%;">
+                        <div class="input-field">
+                            <label for="password">Password:</label>
+                            <input type="password" id="passwordInput" placeholder="Please enter your Password..."
+                                name="password" required minlength="5">
+                        </div>
+                    </div>
+
+                    <div class="input-container" style="margin-top: 2%;">
+                        <div class="input-field">
+                            <label for="date">Date of Birth:</label>
+                            <input type="date" id="dateInput" placeholder="Please enter your DOB..." name="DOB"
+                                required>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p class="RegisterAlert" id="errorMessage"></p>
+                    </div>
+
+                    <audio id="RegisterSuccess" src="./Sounds/RegisterSucessful.mp3"></audio>
+                    <audio id="RegisterFail" src="./Sounds/RegisterFail.mp3"></audio>
+
+
+                    <!-- Button to submit the registration form -->
+                    <input type="button" id="submit" value="Create Account" class="registerButton"
+                        onclick="storeUser()">
+
+                    <input type="file" id="profilePictureInput" name="profilePicture" accept="image/*">
+
+                </form>
+            </form>
+            <div>
+                <button class="backButton" onclick="goBackToMainModal()">Back</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accounts Modal -->
+    <div id="accountsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 style="color: white; border-bottom: rgb(141, 109, 68) 5px solid; width: 120px;">Accounts</h2>
+            <!-- Buttons for navigation -->
+            <div style="margin-bottom: 10px;">
+                <button id="viewAccountButton">View your Account</button>
+                <input type="text" id="accountSearchBar" placeholder="Search accounts..." oninput="searchAccounts()">
+            </div>
+            <div class="navigation-buttons" id="accountButtons">
+                <button class="navigation-button">Followers</button>
+                <button class="navigation-button">Friends</button>
+                <button class="navigation-button">Friend Requests</button>
+            </div>
+            <!-- User accounts loaded from the database -->
+            <div class="accounts-container" id="accountsList"></div>
+            <div>
+                <button class="backButton" onclick="goBackToPlaceholderAccounts()">Back</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    3
+    <!-- Recipes Modal -->
+    <div id="recipesModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 style="color: white; margin: 30px auto;">Recipes</h2>
+            <!-- Add Your Own Recipe button and search bar -->
+            <div style="margin-bottom: 10px;">
+                <button id="addRecipeButton" onclick="showAddRecipeForm()">Add Your Own Recipe</button>
+                <input type="text" id="recipeSearchBar" placeholder="Search recipes...">
+            </div>
+
+
+
+            <!-- Form element with ID "recipeForm" -->
+            <form id="recipeForm">
+                <!-- Input box for recipe title -->
+                <input type="text" id="recipeTitle" placeholder="Enter recipe title..." style="margin-bottom: 10px;">
+                <!-- Input box for recipe description -->
+                <textarea id="recipeDescription" rows="6" cols="50" placeholder="Enter your recipe here..."
+                    style="margin-bottom: 10px;"></textarea>
+                <!-- Input for uploading images -->
+                <input type="file" name="myFile" id="imageUpload" accept="image/*">
+                <!-- Button for submitting recipe -->
+                <button type="button" onclick="uploadImageAndDescription()" id="submitRecipeButton">Submit
+                    Recipe</button>
+            </form>
+
+            <p class="RegisterAlert" id="userMessage"></p>
+            <!-- Back button -->
+            <button class="backButton" style="float: right;" id="recipeBackButton"
+                onclick="goBackToPlaceholderRecipes()">Back</button>
+
+            <!-- Placeholder recipes -->
+            <div class="placeholder-recipes" id="placeholderRecipes">
+                <!-- Placeholder Recipe 1 -->
+                <div class="recipe">
+                    <img src="./Images/SpaghettiCarbonara.jpg" alt="Spaghetti Carbonara" class="recipe-image">
+                    <div class="recipe-details">
+                        <h3 class="recipe-title">Spaghetti Carbonara</h3>
+                        <p class="recipe-description">A classic Italian pasta dish made with eggs, cheese, pancetta, and
+                            black pepper.</p>
+                    </div>
+                </div>
+
+                <!-- Placeholder Recipe 2 -->
+                <div class="recipe">
+                    <img src="./Images/ChickenAlfredo.jpg" alt="Chicken Alfredo" class="recipe-image">
+                    <div class="recipe-details">
+                        <h3 class="recipe-title">Chicken Alfredo</h3>
+                        <p class="recipe-description">Creamy pasta dish made with fettuccine, chicken, and a rich
+                            Alfredo sauce.</p>
+                    </div>
+                </div>
+
+                <!-- Placeholder Recipe 3 -->
+                <div class="recipe">
+                    <img src="./Images/ChickenAlfredo.jpg" alt="Chicken Alfredo" class="recipe-image">
+                    <div class="recipe-details">
+                        <h3 class="recipe-title">Chicken Alfredo</h3>
+                        <p class="recipe-description">Creamy pasta dish made with fettuccine, chicken, and a rich
+                            Alfredo sauce.</p>
+                    </div>
+                </div>
+
+                <!-- Placeholder Recipe 4 -->
+                <div class="recipe">
+                    <img src="uploads/Chicken.jpeg" class="recipe-image">
+                    <div class="recipe-details">
+                        <h3 class="recipe-title">Vegetable Stir-Fry</h3>
+                        <p class="recipe-description">Healthy and colorful stir-fry made with assorted vegetables, tofu,
+                            and soy sauce.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <h1 class="text">Welcome to CulinaryCanvas!</h1>
+        <div class="description-container">
+            <p1 class="description">
+                Dive into a world of culinary inspiration where every recipe is a work of art! At CulinaryCanvas, we
+                offer a delightful collection of recipes spanning from comforting classics to innovative creations.
+                <br><br>
+                Our virtual kitchen is stocked with a wide array of ingredients waiting for you to explore. Whether
+                you're a seasoned chef or a beginner cook, you'll find something to tantalize your taste buds.
+                <br><br>
+                Watch as our magical cooking tool swirls and dances, bringing recipes to life right before your eyes.
+                Join us on a gastronomic adventure and unleash your inner chef!
+            </p1>
+            <div class="cooking-tool-container">
+                <div class="cooking-spoon" style="margin-left: -20%;">
+                    <img src="./Images/spoon.png" style="height: 50px;">
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <aside>
+        <div style="border: 5px;  ">
+            <img src="./Images/VerticalBurger.jpg" width="85%"
+                style="border-radius: 15px; margin-top: 17.5%; margin-left: 7.5%;">
+        </div>
+    </aside>
+
+    <footer>
+        <!-- Links to various social media platforms with logos and a website logo -->
+        <div class="images">
+            <img src="./Images/YouTubeLogo.png" width="100%" height="50%">
+            <p class="neonText">YouTube</p>
+        </div>
+
+        <div class="images">
+            <img src="./Images/FacebookLogo.jpg" width="100%" height="50%">
+            <p class="neonText">Facebook</p>
+        </div>
+
+        <div class="images">
+            <img src="./Images/TelegramLogo.png" width="100%" height="50%">
+            <p class="neonText">Telegram</p>
+        </div>
+
+        <div class="images">
+            <img src="./Images/WhatsAppLogo.png" width="100%" height="50%">
+            <p class="neonText">WhatsApp</p>
+        </div>
+
+        <div class="images">
+            <img src="./Images/InstagramLogo.png" width="100%" height="50%">
+            <p class="neonText">Instagram</p>
+        </div>
+
+        <div class="footerlogo">
+            <img src="./Images/WebsiteLogo.png" width="100%" height="100%" style="border-radius: 5px;">
+        </div>
+    </footer>
+</body>
+
+</html>
